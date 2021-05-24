@@ -1,0 +1,53 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/campus/campus",
+    "pages/issue/issue",
+    "pages/message/message",
+    "pages/my/my",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ff7f27",
+    "navigationBarTitleText": "ZCST闲置交易平台",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh": true 
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "img/home.png",
+        "selectedIconPath": "img/home_checked.png"
+      },
+      {
+        "pagePath": "pages/campus/campus",
+        "text": "校园",
+        "iconPath": "img/campus.png",
+        "selectedIconPath": "img/campus_checked.png"
+      },
+      {
+        "pagePath": "pages/issue/issue",
+        "text": "发布",
+        "iconPath": "img/issue.png",
+        "selectedIconPath": "img/issue_checked.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "信息",
+        "iconPath": "img/message.png",
+        "selectedIconPath": "img/message_checked.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "img/my.png",
+        "selectedIconPath": "img/my_checked.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
