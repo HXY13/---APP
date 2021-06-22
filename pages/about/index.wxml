@@ -1,0 +1,16 @@
+<!--pages/about/index.wxml-->
+<view class="top">
+  <text class="text1">关于</text>
+</view>
+<view>
+<text class="text2">初衷</text>
+</view>
+<view >
+<text class="text3">本小程序面向吉珠全体师生，以最低的价格买到最好的二手书</text>
+</view>
+<view>
+<text class="text2">设计</text>
+</view>
+<view >
+<text class="text3">由小组团队全体人员共同开发设计，参考多个成熟小程序</text>
+</view>

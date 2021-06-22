@@ -10,13 +10,13 @@ Page({
   //   }
   // },
   data: {
-    motto: 'Hello World',
+    // motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     canIUseGetUserProfile: false,
     canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName'), // 如需尝试获取用户信息可改为false
-
+    
   //   background: ['pages/index/img/图1.jpg', 'pages/index/img/图2.jpg', 'pages/index/img/图3.jpg'],
   //   // indicatorDots: true,
   //   // vertical: false,
@@ -35,6 +35,42 @@ Page({
   bindViewTap() {
     wx.navigateTo({
       url: '../logs/logs'
+    })
+  },
+  suo:function(){
+    wx.navigateTo({
+      url: '../search/search',
+    })
+  },
+  btnOneAction:function(){
+    wx.navigateBack({
+      url: '../message/message',
+    })
+    
+  },
+  btnTwoAction:function(){
+    wx.navigateBack({
+      url: '../message/message',
+    })
+  },
+  btnThreeAction:function(){
+    wx.navigateBack({
+      url: '../message/message',
+    })
+  },
+  btnFourAction:function(){
+    wx.navigateBack({
+      url: '../message/message',
+    })
+  },
+  btnFiveAction:function(){
+    wx.navigateBack({
+      url: '../message/message',
+    })
+  },
+  btnSixAction:function(){
+    wx.navigateBack({
+      url: '../message/message',
     })
   },
   onLoad() {
@@ -65,50 +101,6 @@ Page({
       hasUserInfo: true
     })
   },
-  channel:                                                    
-      [
-        {
-          name:"二手手机",                                                 
-          imgurl:"cloud://ash-1gecd5xpb564b8d4.6173-ash-1gecd5xpb564b8d4-1303835441/cloud_img/essj.png"                        
-        },
-        {
-          name:"数码产品",
-          imgurl:"cloud://ash-1gecd5xpb564b8d4.6173-ash-1gecd5xpb564b8d4-1303835441/cloud_img/sm.png"
-        },
-        {
-          name:"二手图书",
-          imgurl:"cloud://ash-1gecd5xpb564b8d4.6173-ash-1gecd5xpb564b8d4-1303835441/cloud_img/ess.png"
-        },
-        {
-          name:"化妆品",
-          imgurl:"cloud://ash-1gecd5xpb564b8d4.6173-ash-1gecd5xpb564b8d4-1303835441/cloud_img/hzp.png"
-        },
-        {
-          name:"全部分类",
-          imgurl:"cloud://ash-1gecd5xpb564b8d4.6173-ash-1gecd5xpb564b8d4-1303835441/cloud_img/fl.png"
-        }
-      ],
-    background:[                
-      "cloud://ash-1gecd5xpb564b8d4.6173-ash-1gecd5xpb564b8d4-1303835441/cloud_img/index_swiper3.jpg",
-      "cloud://ash-1gecd5xpb564b8d4.6173-ash-1gecd5xpb564b8d4-1303835441/cloud_img/index_swiper1.jpg",
-      "cloud://ash-1gecd5xpb564b8d4.6173-ash-1gecd5xpb564b8d4-1303835441/cloud_img/index_swiper2.jpg"
-    ],
-    user_rec:[              
-      {
-        img:"cloud://ash-1gecd5xpb564b8d4.6173-ash-1gecd5xpb564b8d4-1303835441/cloud_img/iphone.jpg",
-        title:"自用Ipone11 promax"
-      },
-      {
-        img:"cloud://ash-1gecd5xpb564b8d4.6173-ash-1gecd5xpb564b8d4-1303835441/cloud_img/sony.jpg",
-        title:"索尼降噪豆三代 京东购买"
-      },
-      {
-        img:"cloud://ash-1gecd5xpb564b8d4.6173-ash-1gecd5xpb564b8d4-1303835441/cloud_img/kyzz.jpg",
-        title:"2021考研政治全套便宜出"
-      },
-      {
-        img:"cloud://ash-1gecd5xpb564b8d4.6173-ash-1gecd5xpb564b8d4-1303835441/cloud_img/ysl.jpg",
-        title:"YSL口红未拆封低价卖"
-      }
-    ]
+ 
+    
 })

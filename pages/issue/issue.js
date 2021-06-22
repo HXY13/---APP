@@ -1,66 +1,115 @@
-// pages/issue/issue.js
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    img_url: [],
+    content:''
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
+    
+  },
+  input:function(e){
+    this.setData({
+      content:e.detail.value
+    })
+  },
+  chooseimage:function(){
+    var that = this;
+    wx.chooseImage({
+      count: 9, // 默认9  
+      sizeType: ['original', 'compressed'], 
+      sourceType: ['album', 'camera'], 
+      success: function (res) {
+        
+        if (res.tempFilePaths.length>0){
+ 
 
+          if (res.tempFilePaths.length == 9){
+            that.setData({
+              hideAdd:1
+            })
+          }else{
+            that.setData({
+              hideAdd: 0
+            })
+          }
+ 
+
+          let img_url = that.data.img_url;
+          for (let i = 0; i < res.tempFilePaths.length; i++) {
+            img_url.push(res.tempFilePaths[i])
+          }
+          that.setData({
+            img_url: img_url
+          })
+          
+        }
+        
+      }
+    })  
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  send:function(){
+    var that = this;
+    var user_id = wx.getStorageSync('userid')
+    wx.showLoading({
+      title: '上传中',
+    })
+    that.img_upload()
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
+  img_upload: function () {
+    let that = this;
+    let img_url = that.data.img_url;
+    let img_url_ok = [];
 
-  },
+    for (let i = 0; i < img_url.length; i++) {
+      wx.uploadFile({
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
+        url: 'http://wechat.homedoctor.com/Moments/upload_do',
+        filePath: img_url[i],
+        name: 'file',
+        formData: {
+          'user': 'test'
+        },
+        success: function (res) {
+          console.log('上传成功');
 
-  },
+          img_url_ok.push(res.data)
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
+          if (img_url_ok.length == img_url.length) {
+            var userid = wx.getStorageSync('userid');
+            var content = that.data.content;
+            wx.request({
+              url: 'http://wechat.homedoctor.com/Moments/adds',
+              data: {
+                user_id: userid,
+                images: img_url_ok,
+                content: content,
+              },
+              success: function (res) {
+                if (res.data.status == 1) {
+                  wx.hideLoading()
+                  wx.showModal({
+                    title: '提交成功',
+                    showCancel: false,
+                    success: function (res) {
+                      if (res.confirm) {
+                        wx.navigateTo({
+                          url: '/pages/my_moments/my_moments',
+                        })
+                      }
+                    }
+                  })
+                }
+              }
+            })
+          }
+        },
+        fail: function (res) {
+          console.log('上传失败')
+        },
+        
+      })
+    }
+  } 
 })

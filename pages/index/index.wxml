@@ -1,46 +1,15 @@
 
-<!-- <view class="container">
-  <view class="userinfo">
-    <block wx:if="{{canIUseOpenData}}" calss="userinfo-opendata">
-      <view class="userinfo-avatar" bindtap="bindViewTap">
-        <open-data type="userAvatarUrl"></open-data>
-      </view>
-      <open-data type="userNickName"></open-data>
-    </block>
-    <block wx:elif="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
-    </block>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <!-- <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view> -->
-
-  
-
-<!-- <view class="container">
-  <view class="page-body">
-    <view class="page-section page-section-spacing swiper">
-      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-        <block wx:for="{{background}}" wx:key="*this">
+<view class="container">
+  <!-- <swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" duration="1000" circular="true"> 
+    <block wx:for='{{background}}' wx:key="key">
           <swiper-item>
-            <image src="{{item}}" mode="scaleToFill"></image>
+            <image src='{{item}}'></image>
           </swiper-item>
         </block>
-      </swiper>
-    </view>
-
-  </view>
-</view> -->
-
-<view>
-  <swiper indicator-dots="true" autoplay="true">
-    <swiper-item>
+  </swiper> -->
+  <view>
+  <swiper indicator-dots="true" autoplay="true" style="height:160px">
+    <swiper-item style="width: 100%">
       <image src='./img/图1.jpg'></image>
     </swiper-item>
     <swiper-item>
@@ -50,28 +19,121 @@
       <image src='./img/图3.jpg'></image>
     </swiper-item>
   </swiper>
-</view>
-
-<view class="container">
-  <swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" duration="1000" circular="true"> 
-    <block wx:for='{{background}}' wx:key="key">
-          <swiper-item>
-            <image src='{{item}}'></image>
-          </swiper-item>
-        </block>
-  </swiper>
+ </view>
   <view class="search_menu">                              
-    <view class='page_row' bindtap="suo">              
-      <view class="search">  
+    <view class='page_row' bindtap="suo" >              
+      <view class="search"  style="display: flex;">  
         <view class="df search_arr">  
           <icon class="searchcion" size='20' type='search'></icon>  
-          <input class="" placeholder="请输入关键字" value="{{searchValue}}"/>       
-        </view>  
+        </view>
+        <view>
+          <input class="search_inp" placeholder="请输入关键字" value="{{searchValue}}"/>  
+        </view> 
+        <view>
+          <button class='sousuo'  style="margin:4px 15px;width: 42px;height:25px;font-size:10px;padding:0px 0px;float:right">
+            <text class = "sousuotext">搜索</text>                               
+          </button>
+        </view>
+     
+
       </view>  
-      <view class='sousuo'>
-        <text class = "sousuotext">搜索</text>                                    
-      </view>  
-    </view>  
+    </view>
   </view>
+  <!-- <view class="m-menu" style="display:flex">
+    <button bindtap="btnOneAction" plain="false" style="width:50px;height:40px;padding:0px;border:none">
+      <image class="img_jc" src="./img/教材.png" bindtap="btnOneAction"></image>
+    </button>
+    <button bindtap="btnTwoAction" plain="false" style="width:50px;height:40px;padding:0px;border:none">
+      <image class="img_ms" src="./img/美食.png" bindtap="btnTwoAction"></image>
+    </button>
+    <button bindtap="btnThreeAction" plain="false" style="width:50px;height:40px;padding:0px;border:none">
+      <image class="img_wx" src="./img/文学.png" bindtap="btnThreeAction"></image>
+    </button>
+    <button bindtap="btnFourAction" plain="false" style="width:50px;height:40px;padding:0px;border:none">
+      <image class="img_ys" src="./img/艺术.png" bindtap="btnFourAction"></image>
+    </button>
+    <button bindtap="btnFiveAction" plain="false" style="width:50px;height:40px;padding:0px;border:none">
+      <image class="img_zz" src="./img/杂志.png" bindtap="btnFiveAction"></image>
+    </button>
+    <button bindtap="btnSixAction" plain="false" style="width:50px;height:40px;padding:0px;border:none">
+      <image class="img_fl" src="./img/分类.png" bindtap="btnSixAction"></image>
+    </button>
+  </view> -->
+  <!-- <view>
+    <text class="jc">教材</text>
+    <text class="ms">美食</text>
+    <text class="wx">文学</text>
+    <text class="ys">艺术</text>
+    <text class="zz">杂志</text>
+    <text class="all_fl">分类</text>
+  </view> -->
   
+  <view class='icon'>
+    <navigator hover-class="none" url="/pages/list/list?title=教材&goods_id=1">
+      <image src='./img/教材.png' mode="aspectFit"></image>
+      <text>教材</text>
+    </navigator>
+    <navigator hover-class="none" url="/pages/list/list?title=文学&goods_id=2">
+      <image src='./img/文学.png' mode="aspectFit"></image>
+      <text>文学</text>
+    </navigator>
+    <navigator hover-class="none" url="/pages/list/list?title=艺术&goods_id=3">
+      <image src='./img/艺术.png' mode="aspectFit"></image>
+      <text>艺术</text>
+    </navigator>
+    <navigator hover-class="none" url="/pages/classify/index?title=分类&id=4">
+      <image src='./img/分类.png' mode="aspectFit"></image>
+      <text>分类</text>
+    </navigator>
+  </view>
+  <view>
+    <text class="like">猜你喜欢</text>
+  </view>
+  <view>
+    <view>
+      <view style="display:flex">
+        <button bindtap="book1Action" plain="false" style="margin:0px;padding:0px;width:150px;height:170px;border:none">
+          <image class="img_b1" src="./img/book1.jpg"></image>
+        </button>
+
+        <button bindtap="book2Action" plain="false" style="margin:0px;padding:0px;width:150px;height:170px;border:none">
+          <image class="img_b2" src="./img/book2.jpg"></image>
+        </button>
+
+      </view>
+      <view style="display:flex">
+        <text class="b_1">星火英语六级通关</text>
+        <text class="b_2">机器学习西瓜书</text>
+      </view>
+    </view>
+    <view>
+      <view style="display:flex">
+        <button bindtap="book3Action" plain="false" style="margin:0px;padding:0px;width:150px;height:170px;border:none">
+          <image class="img_b3" src="./img/book3.jpg"></image>
+        </button>
+        <button bindtap="book4Action" plain="false" style="margin:0px;padding:0px;width:150px;height:170px;border:none;">
+          <image class="img_b4" src="./img/book4.jpg"></image>
+        </button>
+      </view>
+      <view style="display:flex">
+        <text class="b_3">微信小程序开发</text>
+        <text class="b_4">软件工程</text>
+      </view>
+    </view>
+    <view>
+      <view style="display:flex">
+        <button bindtap="book5Action" plain="false" style="margin:0px;padding:0px;width:150px;height:170px;border:none;">
+          <image class="img_b5" src="./img/book5.jpg"></image>
+        </button>
+        <button bindtap="book6Action" plain="false" style="margin:0px;padding:0px;width:150px;height:170px;border:none;">
+          <image class="img_b6" src="./img/book5.jpg"></image>
+        </button>
+      </view>
+      <view>
+        <text class="b_5">软件工程概论</text>
+        <text class="b_6">软件工程概论</text>
+      </view>
+    </view>
+    </view>
+
 </view>

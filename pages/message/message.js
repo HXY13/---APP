@@ -5,33 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    chat_info:[
-      {
-        photo:  "img/one.png",
-        name: "qz1003",
-        time: "2小时前"
-      },
-      {
-        photo:  "img/two.png",
-        name: "zt1234",
-        time: "5小时前"
-      },
-      {
-        photo:  "img/three.png",
-        name: "frt991",
-        time: "8小时前"
-      },
-      {
-        photo:  "img/four.png",
-        name: "xqr233",
-        time: "9小时前"
-      },
-      {
-        photo:  "img/five.png",
-        name: "ptf123",
-        time: "9小时前"
-      }
-    ]
+
   },
 
   /**
@@ -89,5 +63,4 @@ Page({
   onShareAppMessage: function () {
 
   }
-
 })

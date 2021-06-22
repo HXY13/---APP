@@ -1,11 +1,2 @@
 <!--pages/message/message.wxml-->
-<!-- <text>pages/message/message.wxml</text> -->
-<view class="chat_seller">
-  <navigator url="../my/my" open-type="navigate" wx:for="{{chat_info}}" wx:key="key" class="chat_info"> 
-    <image src="{{item.photo}}"></image>
-    <view style="display:flex;flex-direction:colum;  align-items: initial;">
-      <text class="name">{{item.name}}</text>
-      <text class="time">{{item.time}}</text>
-    </view>
-  </navigator>
-</view>
+<text>pages/message/message.wxml</text>

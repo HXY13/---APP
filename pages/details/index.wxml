@@ -1,0 +1,60 @@
+<!-- banner -->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block>
+    <swiper-item>
+      <image src="{{goods_img}}" data-src="{{item.goods_img}}" bindtap="previewImage"></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" class="banner" duration="{{duration}}" circular="{{duration}}">
+  <block wx:for="{{goods_img}}" wx:key="goods_info">
+    <swiper-item>
+      <image src="{{item.goods_img}}" class="slide-image" mode="aspectFill" data-src='{{goods_img}}' bindtap="previewImage"/>
+    </swiper-item>
+  </block>
+</swiper> -->
+
+<scroll-view scroll-y="true">
+<!-- <view wx:if="goods_id=2">
+  <view class="detail" wx:for="list">
+    <text class="title">{{item.goods_title}}</text>
+    <text class="price">￥{{item.goods_price}}</text>
+  </view>
+</view> -->
+
+
+<!-- <block wx:for="{{list}}" wx:key="index"> -->
+  <view wx:if="{{goods_id==1}}">
+  <navigator>
+  <!-- <view class='detail' wx:if="{{list.item.goods_id==1}}"> -->
+      <view class='detail'>
+        <image src="{{goods_img}}" data-src="{{item.goods_img}}" bindtap="previewImage"></image>
+        <text class='title'>{{item.goods_title}}</text>
+        <text class='price'>￥{{item.goods_price}}</text>
+      </view>
+  </navigator>
+  </view>
+  <view wx:elif="{{goods_id!=1}}">
+    <text>adfkljad;lf</text>
+  </view>
+<!-- </block>  -->
+
+
+  <view class="separate"></view>
+  <!-- sku选择 -->
+  <text bindtap="toggleDialog">请选择购买数量</text>
+  <view class="separate"></view>
+  <text>商品评价</text>
+  <text class="text-remark">东西还可以，好评~</text>
+  <view class="separate"></view>
+  <view class="temp"></view>
+</scroll-view>
+<!-- 底部悬浮栏 -->
+<view class="detail-nav">
+  <image bindtap="toCar" src="./img/shopping_cart_return.png" />
+  <view class="line_nav"></view>
+  <image bindtap="addLike" src="{{isLike?'./img/detail_btn_mark_selected.png':'./img/detail_btn_mark_normal.png'}}" />
+  <button class="button-green" bindtap="addCar" formType="submit">加入购物车</button>
+  <button class="button-red" bindtap="immeBuy" formType="submit">立即购买</button>
+</view>

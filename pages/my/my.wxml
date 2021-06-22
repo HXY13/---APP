@@ -1,22 +1,139 @@
-<!--pages/my/my.wxml-->
-<!-- <text>pages/my/my.wxml</text> -->
-<view class="user_container">
-<view class="userinfo">
-  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 微信账号登录 </button> 
-  <block wx:else>
-    <view class="base-info">
-      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>            
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>                                     
-    <text class="userinfo-id">闲置号：Hsaenox</text>       
-    </view>
-    <navigator open-type="navigate" wx:for="{{channel}}" wx:key="key"> 
-      <view class="user_menu">
-        <image src="{{item.imgurl}}" class="userinfo_img"></image>
-       <text class="recommdant_text">{{item.name}}</text>
+<scroll-view scroll-y style='height:100vh;'>
+  <view class='top'>
+    <!-- <navigator url="/pages/bindPhone/index" class='img'> 
+    </navigator> -->
+    <view>
+      <view class='img'><open-data type="userAvatarUrl"></open-data></view>
+      <view class='text'><open-data type="userNickName"></open-data>
       </view>
+    </view>
+  </view>
+  <navigator url="/pages/cart/index" class='item'>
+    <view class="tubiao">
+      <image src="/img/gouwuche.png" mode="aspectFit"></image>
+    </view>
+    <view class='left'>
+      我的订单
+    </view>
+    <view class='right'>
+      <text>查看全部订单</text>
+    </view>
+    <view>
+      <image class="jiantou" src='/img/my_order.png'></image>
+    </view>
+  </navigator>
+  <view class='icon'>
+    <navigator url="/pages/order/index?type=1" hover-class="none" >
+      <button formType="submit" type="primary" size="default">
+        <image src='/img/pending_payment.png' mode="aspectFit"></image>
+        <text>待付款</text>
+      </button>
     </navigator>
-  </block>
-</view>
-<view>
-</view>
-</view>
+    <navigator url="/pages/order/index?type=2" hover-class="none" >
+    <button formType="submit" type="primary" size="default">
+        <image src='/img/pending_delivery.png' mode="aspectFit"></image>
+        <text>待发货</text>
+    </button>
+    </navigator>
+    <navigator url="/pages/order/index?type=3" hover-class="none" >
+    <button formType="submit" type="primary" size="default">
+        <image src='/img/already_shipped.png' mode="aspectFit"></image>
+        <text>已发货</text>
+    </button>
+    </navigator>
+    <navigator url="/pages/order/index?type=4" hover-class="none" >
+    <button formType="submit" type="primary" size="default">
+        <image src='/img/completed.png' mode="aspectFit"></image>
+        <text>已完成</text>
+    </button>
+    </navigator>
+  </view>
+  <navigator url="/pages/coupon/index" class='item'>
+    <view class="tubiao">
+      <image src="/img/youhuijuan.png" mode="aspectFit"></image>
+    </view>
+    <view class='left'>
+      我的优惠券
+    </view>
+    <view>
+      <image class="jiantou" src='/img/my_order.png'></image>
+    </view>
+  </navigator>
+  <navigator url="/pages/personinfo/index" class='item'>
+    <view class="tubiao">
+      <image src="/img/wo.png" mode="aspectFit"></image>
+    </view>
+    <view class='left'>
+      个人主页
+    </view>
+    <view>
+      <image class="jiantou" src='/img/my_order.png'></image>
+    </view>
+  </navigator>
+  <navigator url="/pages/addressList/index" class='item'>
+    <view class="tubiao">
+      <image src="/img/dizhi.png" mode="aspectFit"></image>
+    </view>
+    <view class='left'>
+      地址管理
+    </view>
+    <view>
+      <image class="jiantou" src='/img/my_order.png'></image>
+    </view>
+  </navigator>
+  <navigator url="/pages/coupon/index" class='item'>
+    <view class="tubiao">
+      <image src="/img/fabu.png" mode="aspectFit"></image>
+    </view>
+    <view class='left'>
+      我的发布
+    </view>
+    <view>
+      <image class="jiantou" src='/img/my_order.png'></image>
+    </view>
+  </navigator>
+  <navigator url="/pages/collect/index" class='item'>
+    <view class="tubiao">
+      <image src="/img/shoucang.png" mode="aspectFit"></image>
+    </view>
+    <view class='left'>
+      我的收藏
+    </view>
+    <view>
+      <image class="jiantou" src='/img/my_order.png'></image>
+    </view>
+  </navigator>
+  <!-- <navigator url="/pages/coupon/index" class='item'>
+    <view class="tubiao">
+      <image src="/img/maichu.png" mode="aspectFit"></image>
+    </view>
+    <view class='left'>
+      我卖出的
+    </view>
+    <view>
+      <image class="jiantou" src='/img/my_order.png'></image>
+    </view>
+  </navigator>
+  <navigator url="/pages/coupon/index" class='item'>
+    <view class="tubiao">
+      <image src="/img/yimaidaoshangpin.png" mode="aspectFit"></image>
+    </view>
+    <view class='left'>
+      我买到的
+    </view>
+    <view>
+      <image class="jiantou" src='/img/my_order.png'></image>
+    </view>
+  </navigator> -->
+  <navigator url="/pages/about/index" class='item'>
+    <view class="tubiao">
+      <image src="/img/guanyu(1).png" mode="aspectFit"></image>
+    </view>
+    <view class='left'>
+      关于
+    </view>
+    <view>
+      <image class="jiantou" src='/img/my_order.png'></image>
+    </view>
+  </navigator>
+</scroll-view>

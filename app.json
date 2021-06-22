@@ -1,11 +1,27 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/campus/campus",
+    "pages/order/order",
     "pages/issue/issue",
     "pages/message/message",
     "pages/my/my",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/list/list",
+    "pages/details/index",
+    "pages/classify/index",
+    "pages/order/index",
+    "pages/orderDetails/index",
+    "pages/addressAdd/index",
+    "pages/addressList/index",
+    "pages/coupon/index",
+    "pages/cart/index",
+    "pages/bindPhone/index",
+    "pages/collect/index",
+    "pages/personinfo/index",
+    "pages/about/index",
+    "pages/sum/sum",
+    "pages/pay/pay",
+    "pages/search/search"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -23,22 +39,16 @@
         "selectedIconPath": "img/home_checked.png"
       },
       {
-        "pagePath": "pages/campus/campus",
-        "text": "校园",
-        "iconPath": "img/campus.png",
-        "selectedIconPath": "img/campus_checked.png"
-      },
-      {
         "pagePath": "pages/issue/issue",
         "text": "发布",
         "iconPath": "img/issue.png",
         "selectedIconPath": "img/issue_checked.png"
       },
       {
-        "pagePath": "pages/message/message",
-        "text": "信息",
-        "iconPath": "img/message.png",
-        "selectedIconPath": "img/message_checked.png"
+        "pagePath": "pages/order/order",
+        "text": "购物车",
+        "iconPath": "img/购物车.png",
+        "selectedIconPath": "img/购物车 (1).png"
       },
       {
         "pagePath": "pages/my/my",

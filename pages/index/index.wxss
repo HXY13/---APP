@@ -18,6 +18,162 @@
   margin-top: 200px;
 }
 
+.search_arr{
+  padding-left: 4px;
+  margin: 7px;
+}
+.search_inp{
+  padding-left: 4px;
+  margin: 4px;
+  width: 200px;
+}
+.sousuo{
+  padding-left: 4px;
+  margin-top: 7px;
+  float: right;
+  /* margin-right: 0px; */
+}
+.icon{
+  border-top:2px solid #EDEDED; 
+  border-bottom:2px solid #EDEDED; 
+  display: flex;
+  padding: 12px 0;
+}
+.icon image{
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+.icon text{
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
+  color: #333;
+  padding-top: 10px;
+}
+.icon navigator{
+  flex: 1 0 25%;
+}
+
+/* .img_jc{
+  height: 38px;
+  width: 50px;
+  padding-left: 10px;
+}
+.img_ms{
+  height: 30px;
+  width: 43px;
+  padding-left: 10px;
+}
+.img_wx{
+  height: 33px;
+  width: 47px;
+  padding-left: 17px;
+}
+.img_ys{
+  height: 35px;
+  width: 52px;
+  padding-left: 15px;
+}
+.img_zz{
+  height: 38px;
+  width: 52px;
+  align-self: center;
+}
+.img_fl{
+  height: 38px;
+  width: 45px;
+  padding-left: 10px;
+}
+.jc{
+  font-size: 12px;
+  padding-left: 24px;
+}
+.ms{
+  font-size: 12px;
+  padding-left: 26px;
+}
+.wx{
+  font-size: 12px;
+  padding-left: 24px;
+}
+.ys{
+  font-size: 12px;
+  padding-left: 30px;
+}
+.zz{
+  font-size: 12px;
+  float: right;
+  padding-right: 70px;
+}
+.all_fl{
+  font-size: 12px;
+  margin-top: -15px;
+  float: right;
+  padding-right: 10px;
+} */
+.like{
+  font-size: 17px;
+  font-weight: 550;
+  padding-left: 120px;
+}
+.img_b1{
+  padding-left: 10px;
+  width: 155px;
+  height: 190px;
+}
+.img_b2{
+  padding-left: 5px;
+  width: 155px;
+  height: 190px;
+}
+.img_b3{
+  padding-left: 10px;
+  width: 155px;
+  height: 190px;
+}
+.img_b4{
+  padding-left: 5px;
+  width: 155px;
+  height: 190px;
+}
+.img_b5{
+  padding-left: 5px;
+  width: 155px;
+  height: 190px;
+}
+.img_b6{
+  padding-left: 5px;
+  width: 155px;
+  height: 190px;
+}
+.b_1{
+  padding-left: 10px;
+  font-size: 14px;
+}
+.b_2{
+  padding-left: 40px;
+  font-size: 14px;
+}
+.b_3{
+  padding-left: 10px;
+  font-size: 14px;
+}
+.b_4{
+  padding-left: 52px;
+  font-size: 14px;
+}
+.b_5{
+  padding-left: 10px;
+  font-size: 14px;
+}
+.b_6{
+  padding-left: 67px;
+  font-size: 14px;
+}
 /* .swiper-box{
   padding: 3rpx;
 }
